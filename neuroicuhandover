@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NeuroICU Patient Handover Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+
+<nav class="container-fluid">
+    <ul>
+        <li><strong>Artemis Hospital NeuroICU Handover</strong></li>
+    </ul>
+    <ul>
+        <li><a href="#patients">Patients</a></li>
+        <li><a href="#new-note">Add Note</a></li>
+        <li><a href="#profile" role="button">Profile</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <div class="grid">
+        <!-- Patient Profile Dashboard -->
+        <section id="patients">
+            <hgroup>
+                <h2>Current Patients</h2>
+                <h3>Review and Update Patient Notes</h3>
+            </hgroup>
+            <p>Select a patient to view or update their notes for a seamless handover experience.</p>
+            
+            <!-- Patient List -->
+            <ul>
+                <li><a href="#patient1">Patient 1 - John Doe</a></li>
+                <li><a href="#patient2">Patient 2 - Jane Smith</a></li>
+                <li><a href="#patient3">Patient 3 - Mark Johnson</a></li>
+            </ul>
+        </section>
+
+        <!-- Patient Notes Section -->
+        <section id="new-note">
+            <hgroup>
+                <h2>Add or Update Notes</h2>
+                <h3>Document patient details and shift notes</h3>
+            </hgroup>
+            <form class="grid">
+                <input type="text" id="patient-name" name="patient-name" placeholder="Patient Name" aria-label="Patient Name" required />
+                <textarea id="patient-notes" name="patient-notes" placeholder="Enter shift notes here..." aria-label="Patient Notes" required></textarea>
+                
+                <!-- Image and Video Upload -->
+                <label for="media-upload">Upload Images or Videos</label>
+                <input type="file" id="media-upload" name="media-upload" accept="image/*,video/*" aria-label="Upload Images or Videos" multiple />
+                
+                <button type="submit" onclick="event.preventDefault()">Save Note</button>
+            </form>
+        </section>
+
+        <!-- Shift History -->
+        <section id="history">
+            <hgroup>
+                <h2>Shift History</h2>
+                <h3>Previous Notes for Quick Reference</h3>
+            </hgroup>
+            <ul>
+                <li><strong>Patient 1:</strong> Stable, post-op day 2. Monitor vitals every 4 hours.</li>
+                <li><strong>Patient 2:</strong> Continuing on antibiotics, MRI scheduled for next shift.</li>
+                <li><strong>Patient 3:</strong> Respiratory status improved, extubation planned.</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<section aria-label="Subscribe example">
+    <div class="container">
+        <article>
+            <hgroup>
+                <h2>Subscribe for Updates</h2>
+                <h3>Get notified of important updates directly</h3>
+            </hgroup>
+            <form class="grid">
+                <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
+                <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+            </form>
+        </article>
+    </div>
+</section>
+
+<footer class="container">
+    <small><a href="#privacy">Privacy Policy</a> • <a href="#terms">Terms of Service</a></small>
+</footer>
+
+</body>
+</html>
